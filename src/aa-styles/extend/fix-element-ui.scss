@@ -1,0 +1,177 @@
+@import "../common/var";
+
+//-------- fix element-ui ----------------------
+.el-button + .el-button-group,
+.el-button-group + .el-button,
+.el-button-group + .el-button-group {
+  margin-left: 10px;
+  margin-top: -1px;
+}
+
+.el-button--default {
+  &:hover,
+  &:focus {
+    color: $--button-default-hover-color;
+    border-color: $--button-default-hover-border-color;
+    background-color: $--button-default-hover-background-color;
+  }
+}
+
+button.el-button.is-plain {
+  &:hover,
+  &:focus {
+    color: $--color-primary-light-10;
+  }
+}
+
+button.el-button--default.is-plain {
+  &:hover,
+  &:focus {
+    color: $--color-primary;
+  }
+}
+
+.el-tag + .el-tag {
+  margin-left: 5px;
+}
+
+.el-range-input {
+  background: $--background;
+}
+
+.el-table__row--striped {
+  td {
+    background: $--color-table-stripe !important;
+  }
+
+  &.hover-row, &:hover {
+    td {
+      background-color: $--color-table-header !important;
+    }
+  }
+}
+
+.el-calendar {
+  background: $--background !important;
+
+  .el-calendar__title {
+    color: $--color-title !important;;
+    font-size: $--font-size-medium;
+  }
+}
+
+.el-color-picker__trigger {
+  border: 1px solid $--color-border !important;
+}
+
+.el-upload--picture-card, .el-upload-dragger, .el-upload-list__item {
+  background-color: $--background !important;
+  border: 1px dashed $--color-border !important;
+}
+
+.el-tree {
+  background-color: transparent !important;
+}
+
+.el-loading-mask {
+  background-color: $--color-mask !important;
+}
+
+.el-menu, .el-menu.el-menu--horizontal {
+  border-width: 0 !important;
+}
+
+.el-menu.el-menu--horizontal {
+  & > .el-menu-item {
+    &:not(.is-disabled):hover,
+    &:not(.is-disabled):focus {
+      background-color: $--background;
+    }
+  }
+
+  & > .el-submenu {
+    & .el-submenu__title {
+      &:hover {
+        background-color: $--background;
+      }
+    }
+  }
+
+  & .el-menu {
+    & .el-menu-item,
+    & .el-submenu__title {
+    }
+  }
+}
+
+.el-drawer {
+  outline: none;
+  color: $--color-normal-text;
+  overflow: auto;
+}
+
+.el-drawer__header {
+  outline: none;
+  color: $--color-title !important;
+  font-size: 24px;
+}
+
+.el-drawer__header > :first-child, .el-drawer__title {
+  outline: none;
+}
+
+.el-drawer__close-btn {
+  outline: none;
+  font-size: 24px !important;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.el-tooltip__popper.is-light {
+  color: $--tooltip-light-color;
+}
+
+div.v-modal {
+  background-color: $--color;
+  opacity: 0.2;
+}
+
+.el-badge > .el-badge__content {
+  color: $--color-primary-light-10;
+}
+
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  color: $--color-primary-light-10 !important;
+}
+
+.el-progress-bar__innerText {
+  color: $--color-primary-light-10 !important;
+}
+
+.el-alert.is-dark {
+  color: $--color-primary-light-10 !important;
+}
+
+.el-tag--dark {
+  color: $--color-primary-light-10 !important;
+}
+
+.el-select .el-tag {
+  background-color: $--color-table-stripe !important;
+}
+
+.el-step__icon {
+  vertical-align: middle;
+}
+
+.el-tooltip__popper {
+  max-width: 600px !important;
+}
+
+.el-link {
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  vertical-align: baseline !important;
+}

@@ -1,0 +1,8 @@
+.content {
+	display: flex;
+	justify-content: space-between;
+}
+.content .right-nav {
+	width: 200px;
+	color: red;
+}
