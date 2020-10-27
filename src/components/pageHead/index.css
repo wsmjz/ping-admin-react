@@ -1,0 +1,20 @@
+.page-header div {
+  color: #fff;
+  padding: 15px;
+  background-color: rgb(27, 26, 26);
+  box-shadow: 0 1px 4px rgba(0,21,41,.08);
+}
+.page-header ul {
+  list-style-type: none;
+  display: flex;
+  color: #fff;
+  padding: 15px;
+  background-color: rgb(27, 26, 26);
+}
+.page-header ul li {
+  padding: 5px;
+  background-color: cornflowerblue;
+  margin: 0 3px;
+  border-radius: 4px;
+  cursor: pointer;
+}

@@ -1,0 +1,61 @@
+.yin-yang {
+    display: flex;
+    align-items: center;
+    width: 10em;
+    height: 10em;
+    font-size: 20px;
+    /* --color1: tomato;
+    --color2: orange; */
+    --color1: white;
+    --color2: black;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+    background-image: linear-gradient(var(--color1) 50%, var(--color2) 50%);
+    animation: rotating linear 5s infinite;
+}
+
+@keyframes rotating {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.yin-yang::before {
+    content: '';
+    width: 50%;
+    height: 50%;
+    background-color: var(--color1);
+    /* mix-blend-mode: screen; */
+    box-sizing: border-box;
+    border: 1.5em solid var(--color2);
+}
+.yin-yang::after {
+    content: '';
+    width: 50%;
+    height: 50%;
+    background-color: var(--color1);
+    /* mix-blend-mode: screen; */
+    box-sizing: border-box;
+    border: 1.5em solid var(--color2);
+}
+
+.yin-yang::before,
+.yin-yang::after {
+    background-color: var(--inner-color);
+    border: 1.5em solid var(--outer-color);
+}
+
+.yin-yang::before {
+    --inner-color: var(--color1);
+    --outer-color: var(--color2);
+}
+
+.yin-yang::after {
+    --inner-color: var(--color2);
+    --outer-color: var(--color1);
+}
+
+.yin-yang,
+.yin-yang::before,
+.yin-yang::after {
+    border-radius: 50%;
+}

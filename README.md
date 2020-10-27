@@ -19,3 +19,9 @@
 ## 注意
 - views 文件理论上只放视图文件
 - 命名pages一个页面一个文件 里面可写store, 常量， 视图等文件
+
+## 策略分析
+- store文件独立为一个大的文件夹，下分每个文件，每个页面<br>
+或是store文件夹下分`action-types`, `actions`, `reducers`<br>
+或是在每个页面文件夹下创建store管理每一个
+

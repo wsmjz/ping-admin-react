@@ -9,6 +9,7 @@ export default {
     component: MarketingModeStore,
     props: ['changeMarketingPlanInfo'],
     initValueNames: ['errorInfo', 'opType', 'rules', 'defaultRule'],
+    defaultProps: []
   },
   MarketingModeCoupon: {
     component: MarketingModeCoupon,

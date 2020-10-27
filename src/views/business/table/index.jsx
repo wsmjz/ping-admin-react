@@ -22,20 +22,21 @@ const data = [
   },
 ];
 export class ComplexTable extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-  state = { // 与写到 constructor 中的区别
+  state = { // 与写到 constructor 中的区别 state需要 写到 constructor就不会报警告
     page: 1,
     onlyId: 1,
-    visible: false // 消息列表进入应为true 唯一ID 认证
+    visible: true // 消息列表进入应为true 唯一ID 认证
+  }
+  constructor(props) {
+    super(props)
+    this.state = {} // 没写state会有警告
   }
   columns = [
     {
       title: 'Name',
       dataIndex: 'name',
       key: 'name',
-      render: text => <a>{text}</a>,
+      render: text => <a href="/#">{text}</a>,
     },
     {
       title: 'Age',
@@ -67,18 +68,18 @@ export class ComplexTable extends React.Component {
       key: 'action',
       render: (text, record) => (
         <span>
-          <a onClick={this.showModal.bind(this, record.age)}>查看 {record.age}</a>
+          <a href="/#" onClick={this.showModal.bind(this, record.age)}>查看 {record.age}</a>
           <Divider type="vertical" />
-          <a onClick={this.showModal}>编辑</a>
+          <a href="/#" onClick={this.showModal}>编辑</a>
           <Divider type="vertical" />
-          <a>删除</a>
+          <a href="/#">删除</a>
         </span>
       )
     },
   ];
   showModal = (id) => {
     this.setState({
-      visible: true,
+      visible: !this.state.visible,
       onlyId: id
     });
   };

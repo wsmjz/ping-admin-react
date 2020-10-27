@@ -78,11 +78,17 @@ class MemberRightPrice extends React.Component {
     )
   }
 }
+/**
+ * connect 的参数与多种写法。。。
+ * @param {*} state 
+ */
+
 // const mapStateToProps = {
 //     param: {
 //         id: 'sdfdfds'
 //     }
 // }
+
 const mapStateToProps = state => {
   return ({
     permissionCode: {

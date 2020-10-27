@@ -4,7 +4,7 @@ import {
   Button
 } from 'antd';
 import NumInput from "./../components/num-input";
-import Item from "./../components/items";
+
 const ThemeContext = React.createContext('light');
 
 function Toolbar() {
@@ -29,8 +29,6 @@ export class Boot extends React.Component {
   render() {
     return (
       <div>
-        <Item width={"100px"} />
-        <Item width="200px" />
         <NumInput
           minBitNum={1}
           maxBitNum={10000}

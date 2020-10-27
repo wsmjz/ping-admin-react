@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		let source = [
+		         [1,2],
+		         [3, 4],
+		         [5, 6],
+		    ]
+		    // 计算 2 个数组时一共组合情况
+		    function reduceTwoArr (source1, source2) {
+		        let result = []
+		        source1.forEach(item => {
+		            source2.forEach(item2 => {
+		                result.push(`${item}-${item2}`)
+						// console.log(item)
+						// console.log(item2)
+						// item.size = item2
+						// let obj = {}
+						// obj.color = item
+						// obj.caiz = item2
+		    //             result.push(obj
+						
+						// {
+							 // item
+						// }
+						// {
+							// item: {
+								// A: item,
+								// B: item2
+							// }
+						// }
+						// )
+		            })
+		        })
+		        return result
+		    }
+		    // 计算多个数组时一共组合情况
+		    function reduceMultipleArr (arr = []) {
+		        return arr.reduce((acc, currentItem) => {
+		            return reduceTwoArr(acc, currentItem)
+		        })
+		    }
+		
+		    // let result = reduceMultipleArr(source)
+		    // console.log(result)
+			
+			// 
+			//规格
+			let sku =[
+				{
+				  name: '颜色',
+				  list:[
+					{
+					  checked: true,
+					  val: '白色'
+					},
+					{
+					  checked: true,
+					  val: '红色'
+					},
+				  ]
+				},
+				{
+					name: '材质',
+					list:[
+						{
+						  checked: true,
+						  val: '牛皮'
+						},
+						{
+						  checked: true,
+						  val: '猪皮'
+						},
+					]
+				},
+				{
+					name: '尺寸',
+					list:[
+						{
+						  checked: true,
+						  val: '100'
+						},
+						{
+						  checked: true,
+						  val: '200'
+						},
+					]
+				}
+			]
+			let color= ['白色','红色'],
+				caiz = ['牛皮','猪皮'],
+				size = ['100','200'];
+			let total = [
+				['白色','红色'],
+				['牛皮','猪皮'],
+				['100','200']
+			]
+			// 循环=>
+			// 白色 牛皮 100
+			// 白色 牛皮 200
+			// 白色 猪皮 100
+			// 白色 猪皮 200
+			
+			// 红色 牛皮 100
+			// 红色 牛皮 200
+			// 红色 猪皮 100
+			// 红色 猪皮 200
+			let result1 = reduceMultipleArr(total)
+			console.log(result1)
+			
+			//处理之后结构
+			// let newArr = [
+			// 	{
+			// 		color: '白色',
+			// 		caiz: '牛皮',
+			// 		size: '100',
+			// 		...
+			// 	},
+			// 	{
+			// 		olor: '白色',
+			// 		caiz: '牛皮',
+			// 		size: '200',
+			// 		...
+			// 	},
+			// 	...
+			// ]
+			
+			
+	</script>
+</html>

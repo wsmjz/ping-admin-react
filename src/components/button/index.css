@@ -1,0 +1,11 @@
+.sw-btn {
+    width: 70px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 4px;
+    background-color: #1890ff;
+    color: #333;
+    cursor: pointer;
+}

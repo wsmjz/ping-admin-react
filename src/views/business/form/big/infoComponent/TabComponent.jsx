@@ -44,7 +44,7 @@ export default class TabComponent extends React.Component {
   render() {
     // const rules = this.props.rules || [];
     // 主页面传过来的值
-    const rules = ['几个元素', '就有几个标签']
+    const rules = ['几个元素', '就有几个标签', '比如这儿有3个']
     console.log(this.props, '传递的参数值22')
     return (
       <div styleName="main-tabs" ref='mainTables'>

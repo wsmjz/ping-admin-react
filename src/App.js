@@ -3,7 +3,9 @@ import { Login } from './views/login'
 import { Protypes } from './views/a-types/index'
 import { Vuepage } from './views/a-types/vue'
 import { Home } from './views/home'
-import { Home1 } from './views/home1'
+import { Dashboard } from './views/dashboard'
+import { UserManerge } from './views/user'
+import { Admin } from './views/auth'
 import { Boot } from './views/bootPage'
 import BigForm from './views/business/form/big'
 import Substep from './views/business/form/substep'
@@ -27,7 +29,9 @@ function App() {
             <Route exact path="/vue-t" component={Vuepage} />
             <Home>
               <Route exact path="/" component={Boot} />
-              <Route exact path="/home" component={Home1} />
+              <Route exact path="/dashboard" component={Dashboard} />
+              <Route exact path="/userManerge" component={UserManerge} />
+              <Route exact path="/auth" component={Admin} />
               <Route exact path="/business/form/substep" component={Substep} />
               <Route exact path="/business/form/big" component={BigForm} />
               <Route exact path="/business/form/trends" component={Trends} />

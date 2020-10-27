@@ -18,7 +18,7 @@
 // ./pages/comm/components/ crowdChoose/newCrowd/ componentFactory.jsx(配置信息)
 import React from 'react';
 import { connect } from 'react-redux';
-import { fromJS } from 'immutable';
+// import { fromJS } from 'immutable';
 import MarketingPlanLayout from './layout/marketing';
 import marketingPlanComponents from './planConfig';
 import {
@@ -113,7 +113,7 @@ export class Asssa extends React.Component {
         readOnlyAboutPuton={2 == 3}
         key={`${2}_${3}`}
         {...props}
-        rules={[{ ruleForShop: 0 }]}
+        rules={[{ ruleForShop: 1 }]}
       />
     );
   };

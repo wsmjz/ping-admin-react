@@ -2,12 +2,7 @@ import React from 'react';
 import { Button, Menu, Icon } from 'antd';
 // import {
 //     AppstoreOutlined,
-//     MenuUnfoldOutlined,
-//     MenuFoldOutlined,
-//     PieChartOutlined,
-//     DesktopOutlined,
-//     ContainerOutlined,
-//     MailOutlined,
+//     DesktopOutlined
 // } from '@ant-design/icons';
 const { SubMenu } = Menu;
 export class Sidebar extends React.Component {
@@ -21,13 +16,10 @@ export class Sidebar extends React.Component {
     };
     render() {
         return (
-            <div style={{ width: 256, marginRight: 30 }}>
-              <Button type="primary" onClick={this.toggleCollapsed} style={{ marginBottom: 16 }}>
-                {/* {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)} */}
-              </Button>
+            <div>
               <Menu
                 defaultSelectedKeys={['1']}
-                defaultOpenKeys={['sub1']}
+                defaultOpenKeys={['sub13']}
                 mode="inline"
                 theme="dark"
                 inlineCollapsed={this.state.collapsed}
@@ -36,13 +28,13 @@ export class Sidebar extends React.Component {
                   <a href="#/">引导页</a>
                 </Menu.Item>
                 <Menu.Item key="2">
-                  <a href="#/home">首页</a>
+                  <a href="#/dashboard">工作台</a>
                 </Menu.Item>
                 <Menu.Item key="3">
-                  <a href="#/marketing">用户设置</a>
+                  <a href="#/userManerge">用户设置</a>
                 </Menu.Item>
                 <Menu.Item key="4">
-                  权限页
+                  <a href="#/auth">权限页</a>
                 </Menu.Item>
                 <SubMenu key="sub1" title="业务模块">
                   <Menu.Item key="sub11">登陆</Menu.Item>

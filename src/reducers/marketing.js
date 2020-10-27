@@ -39,10 +39,10 @@ const initialState = fromJS({
     },
     gameLink: null,
   });
-const RouterUrlMap = {
-  // [keyDictionary.MarketingPlanOpTypes.NEW]: '#/newMarketingPlan/',
-  'aa': '#/newMarketingPlan/'
-};
+// const RouterUrlMap = {
+//   [keyDictionary.MarketingPlanOpTypes.NEW]: '#/newMarketingPlan/',
+//   'aa': '#/newMarketingPlan/'
+// };
 const handlers = {
     [actionTypes.SAVE_MARKETING_PLAN_INFO](
         state,

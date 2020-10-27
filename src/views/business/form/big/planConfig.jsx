@@ -4,7 +4,7 @@
 // 3)每一栏需求信息配置
 import InfoComponent from './infoComponent';
 export default {
-  member: {
+  member: {  // 会员页面配置
     titleName: '主标题1',
     describeEle: `<span>(多商品营销)</span><span style="color:red;margin-left:30px;">${
       '面包屑备注信息'
@@ -20,4 +20,7 @@ export default {
     ],
     msgNoticeInfo: true,
   },
+  mark: { // 营销页面配置
+    
+  }
 }

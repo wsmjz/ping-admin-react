@@ -2,14 +2,14 @@ import React from 'react';
 import {Drawer} from './../drawer/index';
 import './index.css'
 export class Nav extends React.Component {
+    state = {
+        aa: 1
+    }
     constructor(props) {
         super(props)
         this.state = {
             setVisible: false
         }
-    }
-    state = {
-        aa: 1
     }
     show() {
         console.log('111')
@@ -24,11 +24,12 @@ export class Nav extends React.Component {
                 <div className="item">
                     <a href="#/" className="active">React</a>
                     <a href="#/vue-t">Vue</a>
-                    <a>uni-app</a>
-                    <a>H5</a>
-                    <a>小程序</a>
+                    <a href="#/vue-t">uni-app</a>
+                    <a href="#/vue-t">H5</a>
+                    <a href="#/vue-t">小程序</a>
                 </div>
                 <div className="user">
+                    <span>控制台</span>
                     <span>消息通知</span>
                     <span>换肤</span>
                     <span>语言选择</span>

@@ -2,7 +2,7 @@ import React from 'react';
 import { PromotionInfos } from './consts/typesDefine';
 import { Row, Col } from 'antd';
 import { Sidebar } from './../../components/sidebar';
-// import PageHead from './../../components/pageHead'
+import {PageHeader} from '../../components/pageHead/index'
 // import { Nav } from './../../components/nav'
 const routes = [
   {
@@ -61,19 +61,21 @@ export class Home extends React.Component {
       <div>
         {/* <Nav /> */}
         <Row>
-          <Col span={6}>
+          <Col span={3}>
             <Sidebar />
           </Col>
-          <Col span={18}>
+          <Col span={21}>
             {/* <PageHeader
               className="site-page-header"
               title="Title"
               breadcrumb={{ routes }}
               subTitle="This is a subtitle"
             /> */}
-            
+            <PageHeader></PageHeader>
             {/* 嵌套路由容器---------------- */}
-            {this.props.children}
+            <div style={{marginLeft: '15px'}}>
+              {this.props.children}
+            </div>
           </Col>
         </Row>
       </div>

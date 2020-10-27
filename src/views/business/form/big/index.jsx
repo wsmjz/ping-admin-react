@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from 'react-redux';
 import { Form, Input, Button, Checkbox } from 'antd';
 import Asss from "./main";
+import { Apbutton } from "../../../../components/button/index";
 // import * as actions from '../../../../actions/coupon';
 import { saveStepInfo } from '../../../../actions/coupon';
 import { saveMarketingPlanSetting } from '../../../../actions/marketing';
@@ -100,6 +101,9 @@ class BigForm extends React.Component {
 				>
 					保存
 				</Button>
+				<Apbutton type="primary" size={'20'} icon={'图标'}>
+					提交
+				</Apbutton>
 				<div className="form">
 					{/* <Demo></Demo> */}
 					<Asss></Asss>
